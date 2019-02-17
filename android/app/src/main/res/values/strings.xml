@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Restaurant Admin</string>
+    <string name="Welcome">Welcome to Restaurant Admin!</string>
+    <string name="Username">Username:</string>
+    <string name="Password">Password:</string>
+    <string name="LogIn">Log In</string>
+    <string name="LoginString">http://192.168.43.41/RestAdmin/php/Login.php</string>
+    <string name="successful">successful</string>
+    <string name="LoginSuccessful">Login Successful</string>
+    <string name="LoginUnsuccessful">Login Unsuccessful </string>
+    <string name="TryingToLogin">Trying to login</string>
+    <string name="Sending">Sending... Please wait</string>
+    <string name="NetworkError">Network error, please check your connection</string>
+    <string name="Administrate">Administrate</string>
+    <string name="TakeOrder">Take Order</string>
+    <string name="WrongUsername">Wrong username or password</string>
+    <string name="Ingredients">Ingredients</string>
+    <string name="Dishes">Dishes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
