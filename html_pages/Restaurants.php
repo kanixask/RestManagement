@@ -70,6 +70,15 @@
             
         });
       });
+      
+      function ValidateForm(){
+        if($("#txtName").val() == "" || $("#txtDesc").val() == "" || $("#txtPhone").val() == ""){
+            $("#lblError").text("Missing Fields");
+            return false;
+        }else{
+            return true;
+        }
+      }
     </script>
   </head>
   <body>
@@ -78,7 +87,7 @@
         <tbody>
           <tr>
             <td style="width: 20%;text-align: left;padding-left: 50px;" colspan="1">
-              <a href="http://localhost/RestAdmin/html_pages/UserLanding.html">
+              <a href="http://localhost/RestAdmin/html_pages/UserLandingPage.php">
                 <img src="../res/RA.jpg" alt="RA" title="RA"> </a>
             </td>
             <td style="width: 80%;text-align: right;padding-top: 20px;">
@@ -102,7 +111,7 @@
 							} ?> 
 						</td>
                       <td style="padding-right: 50px;"> 
-						<input id="SignOut" class="login" value="Sign Out" type="button">
+						<input id="SignOut" class="login" value="Sign Out" type="button" />
 					  </td>
                     </tr>
                   </tbody>
@@ -122,17 +131,17 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="bar_links" value="Restaurants" type="button">
+							<input class="bar_links" value="Restaurants" type="button" />
 						</td>
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input id="btnInsertRestaurant" class="barmenusublinks_r" value="Insert Restaurant" type="button">
+							<input id="btnInsertRestaurant" class="barmenusublinks_r" value="Insert Restaurant" type="button" />
 						</td>						
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input id="btnEditRestaurant" class="barmenusublinks_r" value="Edit Restaurant" type="button">
+							<input id="btnEditRestaurant" class="barmenusublinks_r" value="Edit Restaurant" type="button" />
 						</td>						
 					</tr>
 				</tbody>
@@ -143,17 +152,17 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="bar_links" value="Ingredients" type="button">
+							<input class="bar_links" value="Ingredients" type="button" />
 						</td>
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_i" value="Insert Ingredient" type="button">
+							<input class="barmenusublinks_i" value="Insert Ingredient" type="button" />
 						</td>						
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_i" value="Edit Ingredient" type="button">
+							<input class="barmenusublinks_i" value="Edit Ingredient" type="button" />
 						</td>						
 					</tr>
 				</tbody>
@@ -164,17 +173,17 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="bar_links" value="Dishes" type="button">
+							<input class="bar_links" value="Dishes" type="button" />
 						</td>
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_d" value="Insert Dish" type="button">
+							<input class="barmenusublinks_d" value="Insert Dish" type="button" />
 						</td>						
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_d" value="Edit Dish" type="button">
+							<input class="barmenusublinks_d" value="Edit Dish" type="button" />
 						</td>						
 					</tr>
 				</tbody>
@@ -185,17 +194,17 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="bar_links" value="Orders" type="button">
+							<input class="bar_links" value="Orders" type="button" />
 						</td>
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_o" value="Insert Order" type="button">
+							<input class="barmenusublinks_o" value="Insert Order" type="button" />
 						</td>						
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_o" value="Edit Order" type="button">
+							<input class="barmenusublinks_o" value="Edit Order" type="button" />
 						</td>						
 					</tr>
 				</tbody>
@@ -204,5 +213,71 @@
         </tr>
       </tbody>
     </table>
+    <form action="../php/InsertRestaurant.php" method="post">
+        <table style="width:60%; position: absolute; top: 200px; left: 400px;">
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <span class="formtitle">Restaurants</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br />
+                        <?php
+                            if(isset($_GET['Message']) && $_GET['Message'] == 'OK'){                                
+                                echo '<span class="resultmsg">Restaurant inserted correctly</span>';
+                            }
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">
+                        <span class="formlabel">
+                            Name:
+                        </span>
+                    </td>
+                    <td style="width: 80%;">
+                        <input id="txtName" name="Name" class="forminput" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="formlabel">
+                            Description:
+                        </span>
+                    </td>
+                    <td>
+                        <textarea id="txtDesc" name="Description" class="formarea" rows="3" cols="50"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="formlabel">
+                            Phone:
+                        </span>
+                    </td>
+                    <td>
+                        <input id="txtPhone" name="Phone" class="forminput" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <input class="formsubmit" type="submit" value="Insert" onclick="return ValidateForm();" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="errormsg" id="lblError"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
   </body>
 </html>
