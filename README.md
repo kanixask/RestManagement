@@ -1,2 +1,0 @@
-# RestManagement
-Management of restaurant

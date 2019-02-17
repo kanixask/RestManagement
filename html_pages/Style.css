@@ -1,0 +1,202 @@
+.login_label {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+}
+
+.lbl_title {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+	font-weight: bold;
+}
+
+.login_inputs {
+	background: #EEEEEE; 
+}
+
+.bar_label {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;        
+	color: #FFFFFF;
+}
+
+.register {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 24px;
+}
+
+.bar {
+	background-color: #ad0000;
+	text-align: center;
+	height:50px;	
+}
+
+.bar_links {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+	background: transparent;
+	border:none;
+	color: #FFFFFF;        
+}
+
+.login {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+	background: transparent;
+	border:none;        
+	font-weight: bold;
+}
+
+.top_td {
+	height: 600px; 
+	background-image: url('../res/Rest.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;	
+	text-align: center;
+	vertical-align: top;
+	padding-top: 100px;
+}
+
+.landing_text {	
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 32px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.registerbox {
+	background-color: #FFFFFF;
+	width:50%; 
+	border-radius: 10px;
+	padding-top:20px;	
+}
+
+.registerform {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 20px;
+}
+
+.registerinputs {
+	background: #EEEEEE;
+	width:	85%;
+}
+
+.registersubmit {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 32px;
+	background: transparent;
+	border:none;        
+	font-weight: bold;
+}
+
+.about_td {
+	height: 300px; 
+	background-color: #ad0000;	
+	vertical-align: top;
+	padding-top: 50px;
+}
+
+.about_label {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 32px;
+	color: #FFFFFF;
+}
+
+.about_txt {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 24;
+	color: #FFFFFF;
+}
+
+.module_td {
+	height: 300px; 
+	background-color: #FFFFFF;	
+	vertical-align: top;
+	padding-top: 50px;
+}
+
+.module_label {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 32px;	
+}
+
+.module_txt {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 24;	
+}
+
+.module_txt_td {
+	vertical-align:top;
+	width:30%;
+	padding-right: 20px;	
+}
+
+.err {
+	color: red;
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+}
+
+.forget {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+	background: transparent;
+	border:none;
+}
+
+
+.barmenu {
+	background-color: #ad0000;	
+	position: absolute;
+	top: 93px;	
+	width: 99%;
+	height: 50px;
+	z-index: -1;
+}
+
+.barmenusublinks_r {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid grey; 
+	text-align: center;
+	border-radius:5px;
+	width: 150px;
+	display: none;
+}
+
+.barmenusublinks_i {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid grey; 
+	text-align: center;
+	border-radius:5px;
+	width: 150px;
+	display: none;
+}
+
+.barmenusublinks_d {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid grey; 
+	text-align: center;
+	border-radius:5px;
+	width: 150px;
+	display: none;
+}
+
+.barmenusublinks_o {
+	font-family: "Aileron Thin", arial, sans-serif;
+	font-size: 16.7px;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid grey; 
+	text-align: center;
+	border-radius:5px;
+	width: 150px;
+	display: none;
+}
