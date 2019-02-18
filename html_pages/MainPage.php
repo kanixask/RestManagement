@@ -70,11 +70,11 @@
         <tbody>
           <tr>
             <td style="width: 40%;text-align: left;padding-left: 50px;" colspan="1">
-              <a href="http://localhost/RestAdmin/html_pages/MainPage.html"> <img
+              <a href="http://localhost/RestAdmin/html_pages/MainPage.php"> <img
 
                   src="../res/RA.jpg" alt="RA" title="RA" /> </a> </td>
             <td style="width: 60%;text-align: right;padding-top: 20px;">
-              <form action="../php/login.php" method="post">
+              <form action="../php/Login.php" method="post">
                 <table style="width: 100%;">
                   <tbody>
                     <tr>
