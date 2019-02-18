@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    require '../php/Database.php';                          
+	require '../php/User.php';
+	require '../php/UserBL.php';													
+	if(!isset($_SESSION['UserID'])){
+	   header('Location: MainPage.php');
+	}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -97,10 +106,7 @@
                     <tr>
                       <td style="text-align:center;padding-right: 15px; width: 80%">
                         <?php 													
-							require '../php/Database.php';                          
-							require '../php/User.php';
-							require '../php/UserBL.php';													
-							session_start();
+							
 							if(isset($_SESSION["UserID"]) && $_SESSION["UserID"] > 0) {
 								$userBL = new UserBL($database); 
 								$userFinder = new User(); 
@@ -214,7 +220,7 @@
       </tbody>
     </table>
     <form action="../php/InsertRestaurant.php" method="post">
-        <table style="width:60%; position: absolute; top: 200px; left: 400px;">
+        <table style="width:60%; position: absolute; top: 200px; left: 600px;">
             <tbody>
                 <tr>
                     <td colspan="2">
@@ -248,7 +254,7 @@
                         </span>
                     </td>
                     <td>
-                        <textarea id="txtDesc" name="Description" class="formarea" rows="3" cols="50"></textarea>
+                        <textarea id="txtDesc" name="Description" class="formarea" rows="3" cols="49"></textarea>
                     </td>
                 </tr>
                 <tr>

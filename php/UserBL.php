@@ -29,12 +29,15 @@
 			return $data;
 		}
 		
-		public function insertUser(){
-			
-		}
-		
-		public function updateUser(){
-			
+		public function insertUser($objUser){
+			$this->database->insert("users",[
+                "Username" => $objUser->Username,
+                "Password" => $objUser->Password,
+                "Name" => $objUser->Name, 
+                "Lastname" => $objUser->Lastname,
+                "Email" => $objUser->Email,
+                "IsAdministrator" => $objUser->IsAdministrator
+            ]);
 		}
 	}
 ?>

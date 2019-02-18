@@ -1,4 +1,4 @@
 <?php
 	session_destroy();
-	header('Location: ../html_pages/MainPage.html');
+	header('Location: ../html_pages/MainPage.php');
 ?>

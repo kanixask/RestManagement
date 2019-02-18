@@ -1,9 +1,19 @@
+<?php
+    session_start();
+    require '../php/Database.php';                          
+	require '../php/User.php';
+	require '../php/UserBL.php';													
+	
+    if(!isset($_SESSION['UserID'])){
+        header('Location: MainPage.php');
+    }						
+?>
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>Rest Admin</title>
-    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="Style.css" />
     <script src="jquery-3.3.1.min.js"></script>
     <script src="jquery.sticky.js"></script>
     <script>
@@ -88,10 +98,7 @@
                     <tr>
                       <td style="text-align:center;padding-right: 15px; width: 80%">
                         <?php 													
-							require '../php/Database.php';                          
-							require '../php/User.php';
-							require '../php/UserBL.php';													
-							session_start();
+							
 							if(isset($_SESSION["UserID"]) && $_SESSION["UserID"] > 0) {
 								$userBL = new UserBL($database); 
 								$userFinder = new User(); 
@@ -102,7 +109,7 @@
 							} ?> 
 						</td>
                       <td style="padding-right: 50px;"> 
-						<input id="SignOut" class="login" value="Sign Out" type="button">
+						<input id="SignOut" class="login" value="Sign Out" type="button" />
 					  </td>
                     </tr>
                   </tbody>
@@ -122,17 +129,17 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="bar_links" value="Restaurants" type="button">
+							<input class="bar_links" value="Restaurants" type="button" />
 						</td>
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input id="btnInsertRestaurant" class="barmenusublinks_r" value="Insert Restaurant" type="button">
+							<input id="btnInsertRestaurant" class="barmenusublinks_r" value="Insert Restaurant" type="button" />
 						</td>						
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input id="btnEditRestaurant" class="barmenusublinks_r" value="Edit Restaurant" type="button">
+							<input id="btnEditRestaurant" class="barmenusublinks_r" value="Edit Restaurant" type="button" />
 						</td>						
 					</tr>
 				</tbody>
@@ -143,17 +150,17 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="bar_links" value="Ingredients" type="button">
+							<input class="bar_links" value="Ingredients" type="button" />
 						</td>
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_i" value="Insert Ingredient" type="button">
+							<input class="barmenusublinks_i" value="Insert Ingredient" type="button" />
 						</td>						
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_i" value="Edit Ingredient" type="button">
+							<input class="barmenusublinks_i" value="Edit Ingredient" type="button" />
 						</td>						
 					</tr>
 				</tbody>
@@ -164,17 +171,17 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="bar_links" value="Dishes" type="button">
+							<input class="bar_links" value="Dishes" type="button" />
 						</td>
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_d" value="Insert Dish" type="button">
+							<input class="barmenusublinks_d" value="Insert Dish" type="button" />
 						</td>						
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_d" value="Edit Dish" type="button">
+							<input class="barmenusublinks_d" value="Edit Dish" type="button" />
 						</td>						
 					</tr>
 				</tbody>
@@ -185,17 +192,17 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="bar_links" value="Orders" type="button">
+							<input class="bar_links" value="Orders" type="button" />
 						</td>
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_o" value="Insert Order" type="button">
+							<input class="barmenusublinks_o" value="Insert Order" type="button" />
 						</td>						
 					</tr>
 					<tr>
 						<td style="padding-left: 10px;">
-							<input class="barmenusublinks_o" value="Edit Order" type="button">
+							<input class="barmenusublinks_o" value="Edit Order" type="button" />
 						</td>						
 					</tr>
 				</tbody>

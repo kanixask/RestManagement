@@ -1,6 +1,4 @@
 <?php
-	require 'vendor/autoload.php';
-	use Medoo\Medoo;
 	require 'Database.php';
 	require 'User.php';
 	require 'UserBL.php';
